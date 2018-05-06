@@ -34,7 +34,7 @@ public class MenuState extends State{
     public void render(SpriteBatch sb) {
         sb.setProjectionMatrix(cam.combined);
         sb.begin();
-        sb.draw(background, 0, 0, FlappyBird.WIDTH, FlappyBird.HEIGHT);
+        sb.draw(background, 0, 0);
         sb.draw(playButton, cam.position.x - playButton.getWidth()/2, cam.position.y);
         sb.end();
     }
@@ -43,6 +43,5 @@ public class MenuState extends State{
     public void dispose() {
         background.dispose();
         playButton.dispose();
-        System.out.println("Menu State Disposed");
     }
 }
